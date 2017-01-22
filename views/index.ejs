@@ -1,106 +1,121 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+</head>
+<body>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
 
-    <a href="/actors">Actors</a><br>
-    <a href="/movies">Movies</a><br>
-    <h3>Inne</h3>
+<a href="/actors">Actors</a><br>
+<a href="/movies">Movies</a><br>
+<h3>Inne</h3>
 
-    <div class="row">
-      <a href="/movies/movies-table-gt" style="color:white">
+<div class="row">
+    <a href="/movies/movies-table-gt" style="color:white">
         <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Lista filmów z conajmniej dwoma aktorami</div>
-      </a><br>
-    </div>
-    <div class="row">
-        <a href="/movies/movies-table-rate-grater" style="color:white">
-            <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Lista filmów z oceną powyżej 3.0</div>
-        </a><br>
-    </div>
-    <div class="row">
-        <a href="/movies/movies-table-rate-sorted" style="color:white">
-            <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Lista filmów posortowanych według oceny</div>
-        </a><br>
-    </div>
+    </a><br>
+</div>
+<div class="row">
+    <a href="/movies/movies-table-rate-grater" style="color:white">
+        <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Lista filmów z oceną powyżej 3.0</div>
+    </a><br>
+</div>
+<div class="row">
+    <a href="/movies/movies-table-rate-sorted" style="color:white">
+        <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Lista filmów posortowanych według oceny</div>
+    </a><br>
+</div>
 
-    <div class="row">
-        <a href="/actors/soltero" style="color:white">
-            <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Aktorzy ktorzy sa singlami</div>
-        </a><br>
-    </div>
-    <br>
-    <br>
+<div class="row">
+    <a href="/actors/soltero" style="color:white">
+        <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Aktorzy ktorzy sa singlami</div>
+    </a><br>
+</div>
+<br>
+<br>
 
-    <div class="row">
-        <a href="/movies/year_16_estados_unidos" style="color:white">
-            <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Lista filmow wypremierowanych po
-                <br>2016 produkcji Stan zjednoczonych</div>
-        </a><br>
-    </div>
-    <div class="row">
-        <a href="/movies/seriale_lub_horrory_w_2016_roku" style="color:white">
-            <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Lista seriali i horrorow
-                <br>wypremierowanych w 2016 roku</div>
-        </a><br>
-    </div>
-    <div class="row">
-        <a href="/movies/actors_with_height_lower_than_180" style="color:white">
-            <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Lista aktorow ze wzrostem
-                <br>nizszym niz 1.80</div>
-        </a><br>
-    </div>
+<div class="row">
+    <a href="/movies/year_16_estados_unidos" style="color:white">
+        <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Lista filmow wypremierowanych po
+            <br>2016 produkcji Stan zjednoczonych</div>
+    </a><br>
+</div>
+<div class="row">
+    <a href="/movies/seriale_lub_horrory_w_2016_roku" style="color:white">
+        <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Lista seriali i horrorow
+            <br>wypremierowanych w 2016 roku</div>
+    </a><br>
+</div>
+<div class="row">
+    <a href="/movies/actors_with_height_lower_than_180" style="color:white">
+        <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Lista aktorow ze wzrostem
+            <br>nizszym niz 1.80</div>
+    </a><br>
+</div>
 
-    <div class="row">
-        <a href="/movies/brad_pit_vives_from_united_states" style="color:white">
-            <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Zony Brada Pitta ze Stan Zjednoczonych
-                <br>nizszym niz 1.80</div>
-        </a><br>
-    </div>
+<div class="row">
+    <a href="/movies/brad_pit_vives_from_united_states" style="color:white">
+        <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Zony Brada Pitta ze Stan Zjednoczonych
+            <br>nizszym niz 1.80</div>
+    </a><br>
+</div>
 
-  <h4>Agregacje</h4>
-    <div class="row">
-        <a href="/actors/average_height_in_country" style="color:white">
-            <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Sredni wzrost aktora w danym kraju</div>
-        </a><br>
-    </div>
+<h4>Agregacje</h4>
+<div class="row">
+    <a href="/actors/average_height_in_country" style="color:white">
+        <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Sredni wzrost aktora w danym kraju</div>
+    </a><br>
+</div>
 
 
-    <div class="row">
-        <a href="/actors/3_highests_actors_from_united_states" style="color:white">
-            <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Trzech najwyższych aktorow ze
-                <br> Stan Zjednoczonych bez Brada Pitta</div>
-        </a><br>
-    </div>
+<div class="row">
+    <a href="/actors/3_highests_actors_from_united_states" style="color:white">
+        <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Trzech najwyższych aktorow ze
+            <br> Stan Zjednoczonych bez Brada Pitta</div>
+    </a><br>
+</div>
 
-    <div class="row">
-        <a href="/movies/average_movie_rate_in_particular_years" style="color:white">
-            <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Srednio oeniane filmy wypremierowane
-                <br> w poszczególnych latach</div>
-        </a><br>
-    </div>
+<div class="row">
+    <a href="/movies/average_movie_rate_in_particular_years" style="color:white">
+        <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Srednio oeniane filmy wypremierowane
+            <br> w poszczególnych latach</div>
+    </a><br>
+</div>
 
-    <div class="row">
-        <a href="/movies/three_rezysers_with_best_rated_movies" style="color:white">
-            <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">3 Rezyserow z najlepszymi
-                <br> srednimi ocenami filmow </div>
-        </a><br>
-    </div>
+<div class="row">
+    <a href="/movies/three_rezysers_with_best_rated_movies" style="color:white">
+        <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">3 Rezyserow z najlepszymi
+            <br> srednimi ocenami filmow </div>
+    </a><br>
+</div>
 
-    <div class="row">
-        <a href="/movies/movies_with_three_or_more_actors" style="color:white">
-            <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Lista filmow z trzema
-                <br> lub wiecej aktorami </div>
-        </a><br>
-    </div>
+<div class="row">
+    <a href="/movies/movies_with_three_or_more_actors" style="color:white">
+        <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Lista filmow z trzema
+            <br> lub wiecej aktorami </div>
+    </a><br>
+</div>
 
-  </body>
+<div class="row">
+    <a href="/movies/sredni_wzrost_aktora_w_filmie" style="color:white">
+        <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Sredni wzrost aktora w filmie</div>
+    </a><br>
+</div>
+
+<div class="row">
+    <a href="/movies/filmy_gdzie_wiecej_niz_trzech_amerykanow" style="color:white">
+        <div class="btn btn-primary col-xs-12 col-sm-6 col-md-3 col-lg-2">Filmy gdzie gra wiecej niż
+            <br> 3 amerykanow</div>
+    </a><br>
+</div>
+
+
+
+
+</body>
 </html>
-
 
