@@ -52,7 +52,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(5000, function() {
+app.listen(process.env.PORT || 5000, function() {
   console.log('Node app is running on port', 5000);
 });
 
