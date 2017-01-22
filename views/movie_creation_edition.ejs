@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add movie</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+
+
+    <link rel="stylesheet" href="/docs/css/bootstrap-3.3.2.min.css" type="text/css">
+    <link rel="stylesheet" href="/docs/css/bootstrap-example.css" type="text/css">
+    <link rel="stylesheet" href="/docs/css/prettify.css" type="text/css">
+
+    <script type="text/javascript" src="/docs/js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="/docs/js/bootstrap-3.3.2.min.js"></script>
+    <script type="text/javascript" src="/docs/js/prettify.js"></script>
+
+    <link rel="stylesheet" href="/dist/css/bootstrap-multiselect.css" type="text/css">
+    <script type="text/javascript" src="/dist/js/bootstrap-multiselect.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            window.prettyPrint() && prettyPrint();
+        });
+    </script>
+
+</head>
+<body>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Select Actors</label>
+    <div class="col-sm-10">
+        <select id="example-post" form="add_movie" name="actors_list" multiple="multiple" required>
+            <% for(var i=0; i<actors.length; i++) {%>
+            <% object = false %>
+            <% for(var j=0; j<movie.obsadaIDS.length; j++) { %>
+            <% if(actors[i]._id.equals(movie.obsadaIDS[j])) {%>
+            <option value="<%= actors[i]._id %>" <%='selected' %>>
+                <%= (!!actors[i].name) ? actors[i].name : "No name"  %>
+            </option>
+            <% object = true %>
+            <% break %>
+            <% } %>
+            <% } %>
+            <% if(object == false) {%>
+            <option value="<%= actors[i]._id %>" <%='' %>>
+                <%= (!!actors[i].name) ? actors[i].name : "No name"  %>
+            </option>
+            <% } %>
+            <% } %>
+        </select>
+    </div>
+</div>
+<form id="add_movie" method="post" action="/movies/add">
+    ID: <br>
+    <input readonly type="text" name="movie_id" value="<%= (!!movie._id) ? movie._id : '' %>">
+    <br> Display name: <br>
+    <input type="text" name="movie_name" value="<%= (!!movie.name) ? movie.name : '' %>">
+    <br> Label Image: <br>
+    <input type="text" name="movie_label_image" value="<%= (!!movie.label_image) ? movie.label_image : '' %>">
+    <br> Background image: <br>
+    <input type="text" name="movie_background_image" value="<%= (!!movie.background_image) ? movie.background_image : '' %>">
+    <br> Description <br>
+    <input type="text" name="movie_description" value="<%= (!!movie.description) ? movie.description : '' %>">
+    <br> Genre: <br>
+    <input type="text" name="movie_gatunek" value="<%= (!!movie.gatunek) ? movie.gatunek : '' %>">
+    <br> Rezyseria: <br>
+    <input type="text" name="movie_rezyseria" value="<%= (!!movie.rezyseria) ? movie.rezyseria : '' %>">
+    <br> Scenraiusz: <br>
+    <input type="text" name="movie_scenariusz" value="<%= (!!movie.scenariusz) ? movie.scenariusz : '' %>">
+    <br> Country Production: <br>
+    <input type="text" name="movie_produkcja" value="<%= (!!movie.produkcja) ? movie.produkcja : '' %>">
+    <br> Release date: <br>
+    <input type="text" name="movie_premiera" value="<%= (!!movie.premiera) ? movie.premiera : '' %>">
+    <br> Release only yearL: <br>
+    <input type="text" name="movie_premiera_rok" value="<%= (!!movie.premiera_rok) ? movie.premiera_rok : '' %>">
+    <br> Rate: <br>
+    <input type="text" name="movie_ocena" value="<%= (!!movie.ocena) ? movie.ocena : '' %>">
+
+    <br><input type="submit" value="Save">
+</form>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#example-post').multiselect({
+            includeSelectAllOption: true,
+            enableFiltering: true
+        });
+    });
+</script>
+</body>
+</html>

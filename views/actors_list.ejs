@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/awesome_table.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/button.css">
+    <script src="/javascripts/awesome_table.js"></script>
+    <script src="/javascripts/ripple_effect.js"></script>
+</head>
+<body>
+<div class="table-responsive-vertical shadow-z-1 signin-card">
+
+    <table id="table" class="table table-hover table-mc-light-blue">
+        <thead>
+        <tr>
+            <th>Photo</th>
+            <th>Name </th>
+            <th>Spouse </th>
+            <th>Date of birth</th>
+            <th colspan=2>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% items.forEach(function(item) { %>
+            <tr>
+                <td data-title="Photo">
+                    <img class="centered-and-cropped" width="100" height="100" style="border-radius:50%" src=<%= item.image %>>
+                </td>
+                <td data-title="Name"><%= item.name %></td>
+                <td data-title="Spouse"> <%= item.spouse %></td>
+                <td data-title="Date of birth"> <%= item.dob %></td>
+                <td><a href="/actors/<%= item._id %>/edit" type="button" class="btn btn-info"> Edit </a></td>
+                <td><a href="/actors/<%= item._id %>/remove" type="button" class="btn btn-danger"> Remove </a></td>
+
+            </tr>
+        <% }); %>
+
+        </tbody>
+    </table>
+    <a href="/actors/add">Dodaj</a><br><br>
+    <a href="/">Powrót do strony głównej</a>
+
+</div>
+</body>

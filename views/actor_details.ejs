@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dodaj actora</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<form id="add_actor" method="post" action="/actors/add">
+    ID: <br>
+    <input readonly type="text" name="actor_id" value="<%= (!!locals._id) ? locals._id : '' %>">
+    <br> Display name: <br>
+    <input type="text" name="actor_name" value="<%= (!!locals.name) ? locals.name : '' %>">
+    <br> Description: <br>
+    <input type="text" name="actor_description" value="<%= (!!locals.description) ? locals.description : '' %>">
+    <br> Date of birth: <br>
+    <input type="text" name="actor_dob" value="<%= (!!locals.dob) ? locals.dob : '' %>">
+    <br> Country: <br>
+    <input type="text" name="actor_country" value="<%= (!!locals.country) ? locals.country : '' %>">
+    <br> Height: <br>
+    <input type="text" name="actor_height" value="<%= (!!locals.height) ? locals.height : '' %>">
+    <br> Spouse: <br>
+    <input type="text" name="actor_spouse" value="<%= (!!locals.spouse) ? locals.spouse : '' %>">
+    <br> Children: <br>
+    <input type="text" name="actor_children" value="<%= (!!locals.children) ? locals.children : '' %>">
+    <br> Image URL: <br>
+    <input type="text" name="actor_image" value="<%= (!!locals.image) ? locals.image : '' %>">
+
+    <br><input type="submit" value="Save">
+</form>
+</body>
+</html>

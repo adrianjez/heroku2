@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movies List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/awesome_table.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/button.css">
+    <script src="/javascripts/awesome_table.js"></script>
+    <script src="/javascripts/ripple_effect.js"></script>
+</head>
+<body>
+<div class="table-responsive-vertical shadow-z-1 signin-card">
+
+    <table id="table" class="table table-hover table-mc-light-blue">
+        <thead>
+        <tr>
+            <th>Photo</th>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Rate</th>
+            <th colspan=2>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% items.forEach(function(item) { %>
+        <tr>
+            <td data-title="Photo">
+                <img class="centered-and-cropped" width="100" height="100" style="border-radius:50%" src=<%= item.label_image %>>
+            </td>
+            <td data-title="Title"><%= item.name %></td>
+            <td data-title="Year"> <%= item.premiera_rok %></td>
+            <td data-title="Rate"> <%= item.ocena %></td>
+            <td><a href="/movies/<%= item._id %>/edit" type="button" class="btn btn-info"> Edit </a></td>
+            <td><a href="/movies/<%= item._id %>/details" type="button" class="btn btn-info"> Details </a></td>
+            <td><a href="/movies/<%= item._id %>/remove" type="button" class="btn btn-danger"> Remove </a></td>
+
+        </tr>
+        <% }); %>
+
+        </tbody>
+    </table>
+    <a href="/movies/add">Add</a><br><br>
+    <a href="/">Home</a>
+
+</div>
+
+</body>

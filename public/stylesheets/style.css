@@ -1,0 +1,47 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.center-cropped {
+    width: 100px;
+    height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Set the image to fill its parent and make transparent */
+.profile-img {
+    width:         80px;
+    height:        80px;
+    border-radius: 40px;
+
+
+    background-color:    #ccc;
+    background-position: center center;
+}
+
+.centered-and-cropped { object-fit: cover }
+
+.center-div {
+    text-align: center; /* for IE */
+    position: absolute;
+}
+
+.content-div {
+    width: 400px;
+    border: 1px solid #000;
+    position: absolute;
+
+}
+#over img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
